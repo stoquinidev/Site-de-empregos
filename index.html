@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Vagas</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Overlay para fechar menu ao clicar fora -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <div class="sidebar">
+        <!-- Botão de fechar adicionado -->
+        <button class="sidebar-close" id="sidebarClose">
+            <i class='bx bx-x'></i>
+        </button>
+        
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <a href="#"><i class='bx bx-briefcase-alt'></i> Trabalhos</a>
+            </div>
+
+            <div class="side-nav">
+                <div class="item active">
+                    <i class='bx bx-home'></i>
+                    <a href="#">Início</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-bell'></i>
+                    <a href="#">Notificações</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-briefcase'></i>
+                    <a href="#">Meus Apps</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-bookmark-minus'></i>
+                    <a href="#">Vagas Salvas</a>
+                </div>
+                <div class="item">
+                    <i class='bx bx-cog'></i>
+                    <a href="#">Configurações</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-profile">
+            <div class="info">
+                <img src="assets/profile-1.png" alt="Perfil">
+                <div class="user-details">
+                    <a href="#">Victor Dev</a>
+                    <p>Desenvolvedor</p>
+                </div>
+            </div>
+            <div class="skills">
+                <h5>Habilidades e Especializações</h5>
+                <div class="skill-tags">
+                    <div class="item"><p>HTML</p></div>
+                    <div class="item"><p>CSS</p></div>
+                    <div class="item"><p>Java Script</p></div>
+                    <div class="item"><p>React</p></div>
+                    <div class="item"><p>Node.js</p></div>
+                </div>
+            </div>
+            <button>Ver Perfil</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="nav">
+            <button id="menuToggle" class="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="search-container">
+                <div class="search">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Buscar vagas ou empresas">
+                </div>
+                <div class="city">
+                    <i class='bx bxs-location-plus'></i>
+                    <input type="text" placeholder="Informe cidade, estado ou região">
+                </div>
+            </div>
+            
+            <button class="search-btn">Pesquisar</button>
+            
+            <div class="nav-actions">
+                <!-- Botão de Tema -->
+                <button class="theme-toggle" id="themeToggle" title="Alternar tema">
+                    <i class='bx bx-sun'></i>
+                </button>
+                
+                <div class="notification">
+                    <i class='bx bx-bell'></i>
+                </div>
+                <div class="user-info">
+                    <img src="assets/profile-1.png" alt="Usuário">
+                    <div class="user-details">
+                        <a href="#">Victor Dev <i class='bx bx-chevron-down'></i></a>
+                        <p>Victor@dev.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="content">
+                <div class="header">
+                    <h4>Oportunidades compatíveis com suas habilidades <span>300</span></h4>
+                    <p>Veja as vagas que se encaixam no seu perfil</p>
+                </div>
+
+                <div class="job-cards">
+                    <!-- Cards de vagas AUMENTADOS -->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="job-info">
+                                <i class='bx bxl-apple'></i>
+                                <div class="job-details">
+                                    <h5>Apple <span>| Agora mesmo</span></h5>
+                                    <a href="#" class="job-title">Designer de UI/UX Júnior</a>
+                                    <p class="job-location">📍 São Paulo, Brasil</p>
+                                </div>
+                            </div>
+                            <i class='bx bx-bookmark-plus bookmark-icon'></i>
+                        </div>
+                        <div class="card-tags">
+                            <a href="#">💻 Remoto</a>
+                            <a href="#">⚡ Freelancer</a>
+                            <a href="#">🎯 Júnior</a>
+                        </div>
+                        <div class="card-desc">
+                            <p>Procuramos um Designer de UI/UX Júnior apaixonado por criar interfaces intuitivas e experiências excepcionais. Junte-se à Apple e participe de projetos inovadores que impactam milhões de usuários mundialmente.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="salary">
+                                <strong>💰 Salário:</strong> R$ 4.500 - R$ 6.000
+                            </div>
+                            <div class="job-type">
+                                <strong>⏰ Tipo:</strong> Freelancer (20h/semana)
+                            </div>
+                        </div>
+                        <button class="apply-btn">Candidatar-se</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="job-info">
+                                <i class='bx bxl-microsoft'></i>
+                                <div class="job-details">
+                                    <h5>Microsoft <span>| Hoje</span></h5>
+                                    <a href="#" class="job-title">Engenheiro de Software Full Stack Júnior</a>
+                                    <p class="job-location">📍 Rio de Janeiro, Brasil</p>
+                                </div>
+                            </div>
+                            <i class='bx bx-bookmark-plus bookmark-icon'></i>
+                        </div>
+                        <div class="card-tags">
+                            <a href="#">🏢 Presencial</a>
+                            <a href="#">💼 Tempo Integral</a>
+                            <a href="#">🎯 Júnior</a>
+                        </div>
+                        <div class="card-desc">
+                            <p>A Microsoft está contratando um Engenheiro de Software Full Stack Júnior para desenvolver e manter aplicações web modernas. Trabalhe com tecnologias como .NET, React, Azure e participe do desenvolvimento de soluções empresariais inovadoras.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="salary">
+                                <strong>💰 Salário:</strong> R$ 5.200 - R$ 7.800
+                            </div>
+                            <div class="job-type">
+                                <strong>⏰ Tipo:</strong> Tempo Integral (40h/semana)
+                            </div>
+                        </div>
+                        <button class="apply-btn">Candidatar-se</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="job-info">
+                                <i class='bx bxl-google'></i>
+                                <div class="job-details">
+                                    <h5>Google <span>| Hoje</span></h5>
+                                    <a href="#" class="job-title">Cientista de Dados Júnior</a>
+                                    <p class="job-location">📍 Belo Horizonte, Brasil</p>
+                                </div>
+                            </div>
+                            <i class='bx bx-bookmark-plus bookmark-icon'></i>
+                        </div>
+                        <div class="card-tags">
+                            <a href="#">💻 Remoto</a>
+                            <a href="#">🕒 Meio Período</a>
+                            <a href="#">🎯 Júnior</a>
+                        </div>
+                        <div class="card-desc">
+                            <p>O Google está contratando um Cientista de Dados Júnior para análise de grandes volumes de dados e geração de insights estratégicos. Experiência em Python, SQL e machine learning são diferenciais. Excelente oportunidade para crescimento profissional.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="salary">
+                                <strong>💰 Salário:</strong> R$ 3.800 - R$ 5.500
+                            </div>
+                            <div class="job-type">
+                                <strong>⏰ Tipo:</strong> Meio Período (30h/semana)
+                            </div>
+                        </div>
+                        <button class="apply-btn">Candidatar-se</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="job-info">
+                                <i class='bx bxl-facebook'></i>
+                                <div class="job-details">
+                                    <h5>Meta <span>| Esta Semana</span></h5>
+                                    <a href="#" class="job-title">Gerente de Produto Júnior</a>
+                                    <p class="job-location">📍 Curitiba, Brasil</p>
+                                </div>
+                            </div>
+                            <i class='bx bx-bookmark-plus bookmark-icon'></i>
+                        </div>
+                        <div class="card-tags">
+                            <a href="#">🏢 Presencial</a>
+                            <a href="#">⚡ Freelancer</a>
+                            <a href="#">🎯 Júnior</a>
+                        </div>
+                        <div class="card-desc">
+                            <p>A Meta busca um Gerente de Produto Júnior para auxiliar no desenvolvimento e gerenciamento de novos produtos com foco na experiência do usuário. Atue na definição de roadmaps, priorização de features e colaboração com equipes multidisciplinares.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="salary">
+                                <strong>💰 Salário:</strong> R$ 4.800 - R$ 6.200
+                            </div>
+                            <div class="job-type">
+                                <strong>⏰ Tipo:</strong> Freelancer (25h/semana)
+                            </div>
+                        </div>
+                        <button class="apply-btn">Candidatar-se</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="job-info">
+                                <i class='bx bxl-amazon'></i>
+                                <div class="job-details">
+                                    <h5>Amazon <span>| Há 2 dias</span></h5>
+                                    <a href="#" class="job-title">Desenvolvedor Backend Pleno</a>
+                                    <p class="job-location">📍 Porto Alegre, Brasil</p>
+                                </div>
+                            </div>
+                            <i class='bx bx-bookmark-plus bookmark-icon'></i>
+                        </div>
+                        <div class="card-tags">
+                            <a href="#">💻 Remoto</a>
+                            <a href="#">💼 Tempo Integral</a>
+                            <a href="#">🚀 Pleno</a>
+                        </div>
+                        <div class="card-desc">
+                            <p>A Amazon está contratando Desenvolvedores Backend Pleno para trabalhar em sistemas de alta escala. Requisitos: experiência com AWS, Node.js, Python e arquitetura de microserviços. Ambiente dinâmico com oportunidades de crescimento internacional.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="salary">
+                                <strong>💰 Salário:</strong> R$ 8.000 - R$ 12.000
+                            </div>
+                            <div class="job-type">
+                                <strong>⏰ Tipo:</strong> Tempo Integral (40h/semana)
+                            </div>
+                        </div>
+                        <button class="apply-btn">Candidatar-se</button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="job-info">
+                                <i class='bx bxl-amazon'></i>
+                                <div class="job-details">
+                                    <h5>Amazon AWS <span>| Há 1 dia</span></h5>
+                                    <a href="#" class="job-title">Arquiteto de Soluções Cloud Sênior</a>
+                                    <p class="job-location">📍 Remoto, Brasil</p>
+                                </div>
+                            </div>
+                            <i class='bx bx-bookmark-plus bookmark-icon'></i>
+                        </div>
+                        <div class="card-tags">
+                            <a href="#">💻 Remoto</a>
+                            <a href="#">💼 Tempo Integral</a>
+                            <a href="#">🏆 Sênior</a>
+                            <a href="#">☁️ AWS</a>
+                        </div>
+                        <div class="card-desc">
+                            <p>A Amazon Web Services busca Arquiteto de Soluções Cloud Sênior para projetar e implementar infraestruturas escaláveis na nuvem. Domínio em serviços AWS, arquitetura serverless, DevOps e melhores práticas de segurança. Mentore equipes e lidere projetos de migração para a nuvem.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="salary">
+                                <strong>💰 Salário:</strong> R$ 15.000 - R$ 22.000
+                            </div>
+                            <div class="job-type">
+                                <strong>⏰ Tipo:</strong> Tempo Integral (40h/semana)
+                            </div>
+                        </div>
+                        <button class="apply-btn">Candidatar-se</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="filters">
+                <!-- Filtros mantidos iguais -->
+                <div class="header">
+                    <h3>Filtros de Vagas</h3>
+                    <a href="#">Limpar tudo</a>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <h4>Período</h4>
+                        <a href="#">Limpar</a>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="today" id="today"><label for="today">Hoje</label></div>
+                        <p>50 Vagas</p>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="week" id="week"><label for="week">Esta Semana</label></div>
+                        <p>150 Vagas</p>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="month" id="month"><label for="month">Este Mês</label></div>
+                        <p>200 Vagas</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <h4>Experiência</h4>
+                        <a href="#">Limpar</a>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="entry" id="entry"><label for="entry">Iniciante</label></div>
+                        <p>50 Vagas</p>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="junior" id="junior"><label for="junior">Júnior</label></div>
+                        <p>100 Vagas</p>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="mid" id="mid"><label for="mid">Pleno</label></div>
+                        <p>100 Vagas</p>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="senior" id="senior"><label for="senior">Sênior</label></div>
+                        <p>50 Vagas</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <h4>Tipo de Contrato</h4>
+                        <a href="#">Limpar</a>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="full" id="full"><label for="full">Tempo Integral</label></div>
+                        <p>100 Vagas</p>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="part" id="part"><label for="part">Meio Período</label></div>
+                        <p>50 Vagas</p>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="freelance" id="freelance"><label for="freelance">Freelancer</label></div>
+                        <p>50 Vagas</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        <h4>Local de Trabalho</h4>
+                        <a href="#">Limpar</a>
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="site" id="site"><label for="site">Presencial</label></div>
+                        <p>100 Vagas</p>
+                    </div>
+                    <div class="location">
+                        <i class='bx bxs-location-plus'></i>
+                        <input type="text" placeholder="Buscar local">
+                    </div>
+                    <div class="checkbox">
+                        <div><input type="checkbox" name="remote" id="remote"><label for="remote">Remoto</label></div>
+                        <p>50 Vagas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
